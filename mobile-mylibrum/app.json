@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "MyLibrum",
+    "slug": "mobile-mylibrum",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "android": {
+      "package": "com.sgb.mobilemylibrum",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "RECORD_AUDIO",
+        "USE_BIOMETRIC",
+        "USE_FINGERPRINT"
+      ]
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "Pesquisa de livros por voz.",
+        "NSSpeechRecognitionUsageDescription": "Pesquisa de livros por voz.",
+        "NSFaceIDUsageDescription": "Autenticação biométrica da conta."
+      }
+    },
+    "plugins": [
+      "expo-local-authentication",
+      "expo-secure-store",
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "Permitir que o MyLibrum use o microfone para pesquisar livros por voz.",
+          "speechRecognitionPermission": "Permitir que o MyLibrum reconheça sua fala para pesquisar no acervo."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Permitir mostrar sua posição no mapa das bibliotecas SENAI."
+        }
+      ]
+    ]
+  }
+}

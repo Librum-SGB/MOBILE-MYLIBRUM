@@ -1,0 +1,11 @@
+node_modules/
+.expo/
+dist/
+npm-debug.*
+*.log
+
+# Não versionar chaves e configuração nativa gerada
+.env
+.env.*
+android/
+ios/
